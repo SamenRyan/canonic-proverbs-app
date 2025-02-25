@@ -1,0 +1,105 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+ProcessPackageException: ProcessException: Failed to find "C:\flutter\bin\cache\dart-sdk\bin\dartaotruntime.exe" in the search path.
+  Command: C:\flutter\bin\cache\dart-sdk\bin\dartaotruntime.exe 
+
+```
+#0      LocalProcessManager.start (package:process/src/interface/local_process_manager.dart:56:7)
+#1      ErrorHandlingProcessManager.start.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:699:24)
+#2      _run (package:flutter_tools/src/base/error_handling_io.dart:569:20)
+#3      ErrorHandlingProcessManager.start (package:flutter_tools/src/base/error_handling_io.dart:698:12)
+#4      DefaultResidentCompiler._compile (package:flutter_tools/src/compile.dart:871:37)
+#5      DefaultResidentCompiler._recompile (package:flutter_tools/src/compile.dart:733:14)
+#6      _RecompileRequest._run (package:flutter_tools/src/compile.dart:419:16)
+#7      _CompilationRequest.run (package:flutter_tools/src/compile.dart:393:30)
+#8      DefaultResidentCompiler._handleCompilationRequest (package:flutter_tools/src/compile.dart:779:23)
+#9      _rootRunUnary (dart:async/zone.dart:1422:47)
+#10     _CustomZone.runUnary (dart:async/zone.dart:1324:19)
+#11     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1233:7)
+#12     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:366:11)
+#13     _DelayedData.perform (dart:async/stream_impl.dart:542:14)
+#14     _PendingEvents.handleNext (dart:async/stream_impl.dart:647:11)
+#15     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:618:7)
+#16     _rootRun (dart:async/zone.dart:1406:47)
+#17     _CustomZone.run (dart:async/zone.dart:1317:19)
+#18     _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+#19     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+#20     _rootRun (dart:async/zone.dart:1414:13)
+#21     _CustomZone.run (dart:async/zone.dart:1317:19)
+#22     _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+#23     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+#24     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#25     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#26     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#27     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:185:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.27.3, on Microsoft Windows [Version
+    10.0.22631.4751], locale en-CM)
+    [32m•[39m Flutter version 3.27.3 on channel stable at C:\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision c519ee916e (3 weeks ago), 2025-01-21 10:32:23
+      -0800
+    [32m•[39m Engine revision e672b006cb
+    [32m•[39m Dart version 3.6.1
+    [32m•[39m DevTools version 2.40.2
+
+[32m[✓][39m Windows Version (Installed version of Windows is version 10 or
+    higher)
+
+[33m[!][39m Android toolchain - develop for Android devices (Android SDK
+    version 34.0.0)
+    [32m•[39m Android SDK at C:\Users\PC\AppData\Local\Android\sdk
+    [32m•[39m Platform android-34, build-tools 34.0.0
+    [32m•[39m Java binary at: C:\path\to\jdk-22\bin\java
+    [31m✗[39m Cannot execute C:\path\to\jdk-22\bin\java to determine the
+      version
+
+[32m[✓][39m Chrome - develop for the web
+    [32m•[39m Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[32m[✓][39m Visual Studio - develop Windows apps (Visual Studio Community 2022
+    17.6.5)
+    [32m•[39m Visual Studio at C:\Program Files\Microsoft Visual
+      Studio\2022\Community
+    [32m•[39m Visual Studio Community 2022 version 17.6.33829.357
+    [32m•[39m Windows 10 SDK version 10.0.22000.0
+
+[33m[!][39m Android Studio (version 2024.1)
+    [32m•[39m Android Studio at C:\Program Files\Android\Android Studio
+    [32m•[39m Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    [32m•[39m Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    [31m✗[39m Unable to find bundled Java version.
+    [32m•[39m Try updating or re-installing Android Studio.
+
+[32m[✓][39m VS Code (version 1.97.0)
+    [32m•[39m VS Code at C:\Users\PC\AppData\Local\Programs\Microsoft VS Code
+    [32m•[39m Flutter extension version 3.104.0
+
+[32m[✓][39m Connected device (4 available)
+    [32m•[39m JSN L21 (mobile)  • 5VSNW19606017670 • android-arm64  • Android
+      10 (API 29)
+    [32m•[39m Windows (desktop) • windows          • windows-x64    •
+      Microsoft Windows [Version 10.0.22631.4751]
+    [32m•[39m Chrome (web)      • chrome           • web-javascript • Google
+      Chrome 132.0.6834.110
+    [32m•[39m Edge (web)        • edge             • web-javascript •
+      Microsoft Edge 131.0.2903.63
+
+[32m[✓][39m Network resources
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 2 categories.
+```
